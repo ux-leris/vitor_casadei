@@ -1,16 +1,29 @@
 <header class="site-header">
 
   <h1 class="site-title">
-    <a href="{{ site.baseurl }}/" title="Home page"><img class="site-logo" src="{{ site.baseurl }}/assets/img/logo.svg"></a>
+    Vitor Casadei
   </h1>
 
   <nav class="site-nav">
     {% for link in site.navigation %}
       {% assign current = nil %}
-      {% if page.url contains link.url %}
+      {% if page.url != '/' and link.url != '/' %}
+        {% if page.url contains link.url %}
+          {% assign current = 'class="current"' %}
+        {% endif %}
+      {% else %}
+        {% if page.url == '/' and link.url == '/' %}
+          {% assign current = 'class="current"' %}
+        {% endif %}
+      {% endif %}
+      {% if page.type == 'article' and link.url contains 'articles' %}
         {% assign current = 'class="current"' %}
       {% endif %}
-    <a href="{{ link.url | prepend: site.baseurl }}" {{ current }} {% if link.desc %} title="{{ link.desc }}" {% endif %}>{{ link.title }}</a>
+    {% if link.url contains 'lattes' %}
+      <a href="{{ link.url }}" target="_blank" {{ current }} {% if link.desc %} title="{{ link.desc }}" {% endif %}>{{ link.title }}</a>
+    {% else %}
+      <a href="{{ link.url | prepend: site.baseurl }}" {{ current }} {% if link.desc %} title="{{ link.desc }}" {% endif %}>{{ link.title }}</a>
+    {% endif %}
     {% endfor %}
   </nav>
 

@@ -1,20 +1,17 @@
 # The main config file for your Jekyll template
 
 # Site settings
-title: Clenemt
-desc: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Vitor Casadei
+desc: Masters Student on Software Engineering at Federal University of São Carlos (UFSCar) campus Sorocaba. My area of interest is Accessibility on mobile, Universal Design, Interface Design Patterns and Accessibility Barriers.
 
 url: https://ux-leris.github.io/vitor_casadei/
-baseurl: '' # the subpath of your site, e.g. /blog
-permalink: /:year/:title/
+baseurl: '/vitor_casadei' # the subpath of your site, e.g. /blog
+permalink: /:title/
 
 # Meta settings
 email: vitor.casadei@gmail.com
 author: Vitor Casadei
-twitter_username: 
+personal_website: casadei.io
 github_username: vcasadei
 github_source: https://ux-leris.github.io/vitor_casadei/
 
@@ -27,18 +24,19 @@ paginate_path: "/articles/page:num/"
 
 # Navigation settings
 navigation:
+  - title: Home
+    url: /
+    desc: Home Page
+  - title: Publications
+    url: /publications/
+    desc: A list of my publications
   - title: Articles
     url: /articles/
-    desc: Some weird ramblings I occasionally publish and instantly forget
-  - title: Projects
-    url: /projects/
-    desc: Projects that I have built in my spare time and that I am proud to showcase
-  - title: Work
-    url: /work/
-    desc: Stuffs that I have worked on an that you may find interesting
-  - title: About
-    url: /about/
-    desc: Learn about me, my hobbies and some other cool things
+    desc: Some ideas I would like to share
+  - title: Lattes
+    url: http://lattes.cnpq.br/2959168271554057
+    desc: Lattes
+
 
 # Front Matter settings
 defaults:
@@ -64,4 +62,3 @@ exclude:
   - vendor
 gems:
   - jekyll-paginate
-
