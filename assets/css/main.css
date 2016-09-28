@@ -327,6 +327,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: inherit; }
 
+.site-title {
+  font-size: 1.602em;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Lato", serif;
+  line-height: 1.1;
+  color: inherit;
+  font-weight: 600; }
+
 h1 {
   font-size: 1.602em; }
 
@@ -362,7 +371,16 @@ h6 {
     font-size: 1rem; }
 
   h6 {
-    font-size: 0.8rem; } }
+    font-size: 0.8rem; }
+
+  .site-title {
+    font-size: 2.441rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Lato", serif;
+    line-height: 1.1;
+    color: inherit;
+    font-weight: 600; } }
 .lead {
   font-size: 1.25rem;
   line-height: 1.6; }
@@ -534,7 +552,6 @@ kbd {
   .site-title {
     float: left;
     width: 20%;
-    color: #4072af;
     margin-bottom: 0.5rem; } }
 .site-footer {
   margin: 4rem 0 6rem;
